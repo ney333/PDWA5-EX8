@@ -18,9 +18,9 @@ echo "
 echo "
 <br>atribuições: ".$resultado->return->atribuições;
 echo "
-<br>atribuições: ".$resultado->return->atribuições;
+<br> dt_inicio: ".$resultado->return->dt_inicio;
 echo "
-<br>atribuições: ".$resultado->return->atribuições;
+<br> dt_nasc: ".$resultado->return->dt_nasc;
 
 echo "";
 ?>

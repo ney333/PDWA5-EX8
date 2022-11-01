@@ -1,22 +1,26 @@
 <?php
 
-$clientpuro = new SoapClient("https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl");
-$cep=array('cep' => "81750270");
-$resultado=$clientpuro->consultaCEP($cep);
-echo "Consulta por CEP no webservice sigep dos correios";
-echo "<br>Endereço: ".$resultado->return->end ;
+$clientpuro = new SoapClient("localhost");
+$cliente=array('cliente' => "1");
+$resultado=$clientpuro->consultacliente($cliente);
+echo "Consulta por Cliente";
+echo "<br>nome: ".$resultado->return->nome ;
 echo "
-<br> Complemento: ".$resultado->return->complemento;
+<br> email: ".$resultado->return->email;
 echo "
-<br>Complemento2: ".$resultado->return->complemento2;
+<br> cargo: ".$resultado->return->cargo;
 echo "
-<br>Bairro: ".$resultado->return->bairro;
+<br> salario: ".$resultado->return->salario;
 echo "
-<br>Estado: ".$resultado->return->uf;
+<br> cpf: ".$resultado->return->CPF;
 echo "
-<br>CEP: ".$resultado->return->cep;
+<br> rg: ".$resultado->return->rg;
 echo "
-<br>ID: ".$resultado->return->id;
+<br>atribuições: ".$resultado->return->atribuições;
+echo "
+<br>atribuições: ".$resultado->return->atribuições;
+echo "
+<br>atribuições: ".$resultado->return->atribuições;
 
 echo "";
 ?>
